@@ -5,6 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,5 +21,9 @@
             Last Name: <input type="text" name="lastname"><br>
             <input type="submit" value="Submit">
         </form>
+        
+        <c:if test="${invalid == true}">
+            <p>Invalid Entry. Please enter both your fristname and lastnames.</p>
+         </c:if>
     </body>
 </html>
